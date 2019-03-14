@@ -8,9 +8,13 @@ public class Escaner {
         int tmp = 0;
 
         MessageBox.Show(Texto);
-
-        tmp = sc.nextInt();
-
+        while (true) {
+            try {
+                String s = sc.next();
+                tmp = Integer.parseInt(s);
+                break;
+            }catch (Exception e){MessageBox.Show("Favor digitar número correto: ");}
+        }
         return tmp;
     }
 }
